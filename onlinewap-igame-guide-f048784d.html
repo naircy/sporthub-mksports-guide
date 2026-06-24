@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 – 轻量互动 自在线娱乐</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f6fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    /* 深色头图 hero */
+    .hero {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      color: #f1f5f9;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+      top: -80px;
+      right: -80px;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+      color: #e0e7ff;
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    /* 浅色正文区 */
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* 卡片柔性布局 */
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2.5rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 1.5rem;
+      flex: 1 1 240px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #edf2f7;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #0f172a;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    .highlight {
+      color: #4f46e5;
+      font-weight: 500;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #4f46e5;
+      color: #4338ca;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2.2rem 0 0.8rem;
+      color: #0f172a;
+      border-left: 4px solid #4f46e5;
+      padding-left: 1rem;
+    }
+
+    .desc-text {
+      font-size: 1rem;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+
+    .tip-box {
+      background: #eef2ff;
+      border-radius: 16px;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0 1.8rem;
+      border-left: 4px solid #4f46e5;
+    }
+
+    .tip-box p {
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-item p {
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 2.2rem 0;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .content {
+        padding: 1.8rem 1rem 3rem;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 4.5rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <section class="hero">
+    <h1>爱游戏 · 轻量自在线</h1>
+    <p>在移动端与桌面端之间，保持一份纯粹、快捷的互动体验。无需安装，打开即用。</p>
+  </section>
+
+  <!-- 内容区 -->
+  <main class="content">
+
+    <!-- 摘要 (产品说明) -->
+    <p class="desc-text">
+      <a href="https://onlinewap-igame.com">爱游戏</a>是一个面向日常放松场景的在线轻互动平台，围绕简洁实用的设计理念，提供一系列风格各异的迷你游戏与趣味模块。无论是等人、通勤，还是短暂休息，都能在这里找到节奏合适的消遣方式。平台始终以低门槛、高效率为核心，无需注册或下载，随时可以进入或离开。
+    </p>
+
+    <!-- 亮点卡片 -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>🎯 即开即玩</h3>
+        <p>所有内容均通过浏览器直接运行，没有安装包，不占用设备存储。打开链接就能开始，关闭即结束。</p>
+      </div>
+      <div class="card">
+        <h3>🧩 模块多样</h3>
+        <p>从反应挑战到策略解谜，从经典复刻到创意玩法，覆盖不同喜好。每次打开都可能遇到新的惊喜。</p>
+      </div>
+      <div class="card">
+        <h3>💡 轻量流畅</h3>
+        <p>针对移动网络环境优化，加载迅速，交互反馈利落。在多数主流浏览器上都能获得稳定表现。</p>
+      </div>
+      <div class="card">
+        <h3>🔒 无账户体系</h3>
+        <p>不收集个人信息，无需注册或登录。你的每一次使用都是私密且自由的。</p>
+      </div>
+    </div>
+
+    <!-- 使用建议 -->
+    <h2 class="section-title">使用场景与建议</h2>
+    <p class="desc-text">
+      当你需要一段短暂但充实的碎片时间，不妨试试打开 <a href="https://onlinewap-igame.com">爱游戏</a>。在咖啡厅等待时、午休间隙、通勤路上，或者单纯想从密集信息流中抽离几分钟——这里的互动内容不需要投入过多精力，却能带来轻度的愉悦与专注。建议搭配耳机，体验更沉浸；也适合与身边朋友轮流尝试，分享即时乐趣。
+    </p>
+
+    <!-- 可信但克制的访问说明 -->
+    <div class="tip-box">
+      <p><span class="highlight">关于使用</span> —— 爱游戏为纯前端互动页面，不包含任何后台追踪脚本或第三方广告弹窗。所有模块均基于标准 Web 技术开发，无隐藏权限请求。你可以放心使用，也欢迎向开发团队反馈体验建议。</p>
+      <p style="margin-top:0.6rem;"><span class="highlight">兼容性提示</span> —— 推荐使用最新版 Chrome、Safari 或 Firefox 浏览器访问，以确保动画与交互效果完整呈现。部分老旧设备或系统可能出现布局偏移，届时可尝试刷新或横向屏幕。</p>
+    </div>
+
+    <!-- FAQ摘要 -->
+    <h2 class="section-title">常见疑问摘要</h2>
+
+    <div class="faq-item">
+      <strong>需要付费或订阅吗？</strong>
+      <p>完全免费。爱游戏不设任何付费墙、会员体系或内购项目。所有内容均可自由体验。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>是否支持保存进度或成绩？</strong>
+      <p>目前所有互动均为单次会话模式，关闭页面后数据不会保留。这有助于保持极简与隐私，但也意味着每次访问都是全新的开始。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>会不会有内容更新？</strong>
+      <p>开发团队会不定期补充新的互动模块，优化现有体验。你只需要偶尔再次打开 <a href="https://onlinewap-igame.com">爱游戏</a>，就能发现一些变化。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>遇到显示异常怎么办？</strong>
+      <p>先尝试刷新页面或清除浏览器缓存。如果问题依旧，可以更换浏览器或检查网络环境。大部分加载问题都与本地网络或缓存相关。</p>
+    </div>
+
+    <hr>
+
+    <p class="desc-text" style="font-size:0.95rem; color:#475569;">
+      爱游戏始终把用户体验的轻量和透明放在首位。没有复杂规则，没有冗余功能，只有一组小而美的互动。如果你习惯了快速、直接、不打扰的线上消遣方式，这里或许正合你心意。
+    </p>
+
+    <div class="footer-note">
+      <span>— 在线 · 轻量 · 即刻 —</span>
+    </div>
+
+  </main>
+
+</body>
+</html>
